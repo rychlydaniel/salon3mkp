@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=manipedi/">
     <title>Salon 3MKP - Miluše Šmejkalová</title>
+    <script>
+        // Zachycení Netlify Identity tokenů a přesměrování do adminu
+        if (window.location.hash.match(/(invite|recovery)_token=/)) {
+            window.location.href = '/admin/' + window.location.hash;
+        } else {
+            window.location.href = '/manipedi/';
+        }
+    </script>
 </head>
 <body>
     <p>Přesměrování na hlavní stránku...</p>

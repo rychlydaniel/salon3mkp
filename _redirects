@@ -1,7 +1,6 @@
 # Netlify konfigurace
 
-# Přesměrování z root na /manipedi
-/  /manipedi/  301
+# Přesměrování řeší index.html (kvůli Netlify Identity tokenům)
 
 # Headers pro bezpečnost
 /*
