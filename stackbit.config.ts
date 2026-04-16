@@ -14,7 +14,8 @@ export default defineStackbitConfig({
                     name: "home-page",
                     type: "page",
                     label: "Úvodní stránka",
-                    match: ["**/index.md"],
+                    urlPath: "/{section}",
+                    filePath: "{section}/index.md",
                     fields: [
                         { name: "title", type: "string", label: "Nadpis", required: true },
                         { name: "layout", type: "string", const: "base.njk", hidden: true },
@@ -29,7 +30,8 @@ export default defineStackbitConfig({
                     name: "contact-page",
                     type: "page",
                     label: "Kontakt",
-                    match: ["**/kontakt.md"],
+                    urlPath: "/{section}/kontakt.html",
+                    filePath: "{section}/kontakt.md",
                     fields: [
                         { name: "title", type: "string", label: "Nadpis", required: true },
                         { name: "layout", type: "string", const: "base.njk", hidden: true },
@@ -52,7 +54,8 @@ export default defineStackbitConfig({
                     name: "content-page",
                     type: "page",
                     label: "Stránka",
-                    match: ["**/*.md"],
+                    urlPath: "/{section}/{slug}.html",
+                    filePath: "{section}/{slug}.md",
                     fields: [
                         { name: "title", type: "string", label: "Nadpis", required: true },
                         { name: "layout", type: "string", const: "base.njk", hidden: true },
@@ -101,5 +104,24 @@ export default defineStackbitConfig({
                 publicPath: "/assets"
             }
         })
-    ]
+    ],
+    siteMap: ({ documents }) => {
+        return documents
+            .filter((doc) => doc.modelName === "home-page" || doc.modelName === "content-page" || doc.modelName === "contact-page")
+            .map((doc) => {
+                const section = doc.fields?.section;
+                const slug = doc.id?.split("/").pop()?.replace(".md", "");
+                let urlPath;
+                if (slug === "index") {
+                    urlPath = `/${section}/`;
+                } else {
+                    urlPath = `/${section}/${slug}.html`;
+                }
+                return {
+                    urlPath,
+                    document: doc,
+                    label: doc.fields?.navLabel || doc.fields?.title
+                };
+            });
+    }
 });
