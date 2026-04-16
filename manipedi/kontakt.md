@@ -1,17 +1,18 @@
 ---
-layout: base.njk
+zip: 407 79 Mikulášovice
 section: manipedi
-title: "Salon 3MKP Miluše Šmejkalová"
-navLabel: "Kontakt"
-navOrder: 8
+facebook: Pedikúra Manikúra Mikulášovice
 pageType: contact
+layout: base.njk
 permalink: /manipedi/kontakt.html
-phone: "606 580 435"
-address: "Mikulášovice 2"
-zip: "407 79 Mikulášovice"
+navOrder: 8
+phone: " Otevírací doba <strong>Pondělí - pátek:</strong><br>Od 08:00 - Dle
+  objednání606 580 435"
+hours: <strong>Pondělí - pátek:</strong><br>Od 08:00 - Dle objednání
+navLabel: Kontakt
+instagram: salon_3mkp
+mapUrl: https://mapy.com/s/boruhujetu
+address: Mikulášovice 2
 ico: "06930671"
-hours: "<strong>Pondělí - pátek:</strong><br>Od 08:00 - Dle objednání"
-facebook: "Pedikúra Manikúra Mikulášovice"
-instagram: "salon_3mkp"
-mapUrl: "https://mapy.com/s/boruhujetu"
+title: Salon 3MKP Miluše Šmejkalová
 ---
