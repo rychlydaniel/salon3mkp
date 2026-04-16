@@ -6,8 +6,7 @@ pageType: contact
 layout: base.njk
 permalink: /manipedi/kontakt.html
 navOrder: 8
-phone: " Otevírací doba <strong>Pondělí - pátek:</strong><br>Od 08:00 - Dle
-  objednání606 580 435"
+phone: "606 580 435"
 hours: <strong>Pondělí - pátek:</strong><br>Od 08:00 - Dle objednání
 navLabel: Kontakt
 instagram: salon_3mkp

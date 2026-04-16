@@ -17,24 +17,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--secondary-color);
+    background: var(--secondary-color) url('/assets/images/header-bg.jpg') center top/cover no-repeat fixed;
 }
 
 /* Header s pozadím */
 .header-bg {
-    background: url('../images/header-bg.jpg') center/cover no-repeat;
-    height: 400px;
-    position: relative;
-}
-
-.header-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    display: none;
 }
 
 /* Navigace */
