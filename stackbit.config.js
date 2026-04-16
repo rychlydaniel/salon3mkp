@@ -6,6 +6,19 @@ module.exports = defineStackbitConfig({
     ssgName: "eleventy",
     nodeVersion: "18",
     devCommand: "npx eleventy --serve --port {PORT}",
+    experimental: {
+        ssg: {
+            name: "eleventy",
+            logPatterns: {
+                up: ["Server at"]
+            },
+            directRoutes: {
+                "socket.io": "socket.io"
+            },
+            proxyWebsockets: true
+        }
+    },
+    customContentReload: true,
     contentSources: [
         new GitContentSource({
             rootPath: __dirname,
