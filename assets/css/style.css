@@ -17,7 +17,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background: var(--secondary-color) url('/assets/images/header-bg.jpg') center top/cover no-repeat fixed;
+    background-color: var(--secondary-color);
 }
 
 /* Header s pozadím */

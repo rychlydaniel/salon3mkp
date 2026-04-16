@@ -12,6 +12,14 @@
             --primary-color: {{ sectionColors.primary }};
             --secondary-color: {{ sectionColors.secondary }};
         }
+        {% if sectionColors.bgType == "image" and sectionColors.bgImage %}
+        body {
+            background-image: url('{{ sectionColors.bgImage }}');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center top;
+        }
+        {% endif %}
     </style>
     {% endif %}
 </head>

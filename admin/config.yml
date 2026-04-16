@@ -21,24 +21,32 @@ collections:
             fields:
               - { label: "Hlavní barva", name: "primary", widget: "color", default: "#2c3e50" }
               - { label: "Doplňková barva", name: "secondary", widget: "color", default: "#e8d5c4" }
+              - { label: "Pozadí", name: "bgType", widget: "select", options: ["color", "image"], default: "image" }
+              - { label: "Obrázek pozadí", name: "bgImage", widget: "image", required: false }
           - label: "Solárium"
             name: "solarium"
             widget: "object"
             fields:
               - { label: "Hlavní barva", name: "primary", widget: "color", default: "#b8860b" }
               - { label: "Doplňková barva", name: "secondary", widget: "color", default: "#fff3d6" }
+              - { label: "Pozadí", name: "bgType", widget: "select", options: ["color", "image"], default: "color" }
+              - { label: "Obrázek pozadí", name: "bgImage", widget: "image", required: false }
           - label: "Masáže"
             name: "masaze"
             widget: "object"
             fields:
               - { label: "Hlavní barva", name: "primary", widget: "color", default: "#4a7c59" }
               - { label: "Doplňková barva", name: "secondary", widget: "color", default: "#e0f0e3" }
+              - { label: "Pozadí", name: "bgType", widget: "select", options: ["color", "image"], default: "color" }
+              - { label: "Obrázek pozadí", name: "bgImage", widget: "image", required: false }
           - label: "Čínská medicína"
             name: "dtcm"
             widget: "object"
             fields:
               - { label: "Hlavní barva", name: "primary", widget: "color", default: "#8b4513" }
               - { label: "Doplňková barva", name: "secondary", widget: "color", default: "#f5e6d3" }
+              - { label: "Pozadí", name: "bgType", widget: "select", options: ["color", "image"], default: "color" }
+              - { label: "Obrázek pozadí", name: "bgImage", widget: "image", required: false }
 
   # ── Manikúra & Pedikúra ──
   - name: "manipedi"

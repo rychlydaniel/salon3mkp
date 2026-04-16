@@ -1,18 +1,26 @@
 {
     "manipedi": {
         "primary": "#2c3e50",
-        "secondary": "#e8d5c4"
+        "secondary": "#e8d5c4",
+        "bgType": "image",
+        "bgImage": "/assets/images/header-bg.jpg"
     },
     "solarium": {
         "primary": "#b8860b",
-        "secondary": "#fff3d6"
+        "secondary": "#fff3d6",
+        "bgType": "color",
+        "bgImage": ""
     },
     "masaze": {
         "primary": "#4a7c59",
-        "secondary": "#e0f0e3"
+        "secondary": "#e0f0e3",
+        "bgType": "color",
+        "bgImage": ""
     },
     "dtcm": {
         "primary": "#8b4513",
-        "secondary": "#f5e6d3"
+        "secondary": "#f5e6d3",
+        "bgType": "color",
+        "bgImage": ""
     }
 }
