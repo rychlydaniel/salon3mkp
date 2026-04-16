@@ -1,0 +1,252 @@
+backend:
+  name: test-repo
+
+locale: "cs"
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  # ── Manikúra & Pedikúra ──
+  - name: "manipedi"
+    label: "Manikúra & Pedikúra"
+    files:
+      - name: "manipedi-index"
+        label: "Úvodní stránka"
+        file: "manipedi/index.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string", default: "Vítejte na stránce salonu 3MKP Miluše Šmejkalová" }
+      - name: "manipedi-pedikura"
+        label: "Pedikúra"
+        file: "manipedi/pedikura.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "manipedi-manikura"
+        label: "Manikúra"
+        file: "manipedi/manikura.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "manipedi-parafin"
+        label: "Parafínové zábaly"
+        file: "manipedi/parafinove-zabaly.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "manipedi-epilace"
+        label: "Epilace"
+        file: "manipedi/epilace.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "manipedi-pojistovna"
+        label: "Příspěvek pojišťovny"
+        file: "manipedi/prispevek-pojistovny.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "manipedi-poukazy"
+        label: "Dárkové poukazy"
+        file: "manipedi/darkove-poukazy.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "manipedi-kontakt"
+        label: "Kontakt"
+        file: "manipedi/kontakt.html"
+        fields:
+          - { label: "Telefon", name: "phone", widget: "string" }
+          - { label: "Adresa", name: "address", widget: "string" }
+          - { label: "IČO", name: "ico", widget: "string" }
+          - { label: "Otevírací doba", name: "hours", widget: "string" }
+
+  # ── Solárium ──
+  - name: "solarium"
+    label: "Solárium"
+    files:
+      - name: "solarium-index"
+        label: "Úvodní stránka"
+        file: "solarium/index.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+      - name: "solarium-info"
+        label: "Solárium"
+        file: "solarium/solarium.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "solarium-kremy"
+        label: "Krémy"
+        file: "solarium/kremy.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "solarium-doporuceni"
+        label: "Doporučení"
+        file: "solarium/doporuceni.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "solarium-poukazy"
+        label: "Dárkové poukazy"
+        file: "solarium/darkove-poukazy.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "solarium-kontakt"
+        label: "Kontakt"
+        file: "solarium/kontakt.html"
+        fields:
+          - { label: "Telefon", name: "phone", widget: "string" }
+          - { label: "Adresa", name: "address", widget: "string" }
+          - { label: "Otevírací doba", name: "hours", widget: "string" }
+
+  # ── Masáže ──
+  - name: "masaze"
+    label: "Masáže"
+    files:
+      - name: "masaze-index"
+        label: "Úvodní stránka"
+        file: "masaze/index.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+      - name: "masaze-sportovni"
+        label: "Masáže (ceník)"
+        file: "masaze/sportovni-masaz.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Popis", name: "body", widget: "markdown" }
+          - label: "Ceník"
+            name: "pricing"
+            widget: "list"
+            fields:
+              - { label: "Služba", name: "service", widget: "string" }
+              - { label: "Délka", name: "duration", widget: "string" }
+              - { label: "Cena", name: "price", widget: "string" }
+      - name: "masaze-balneo"
+        label: "Balneo zábaly"
+        file: "masaze/balneo-zabaly.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Popis", name: "body", widget: "markdown" }
+          - label: "Ceník"
+            name: "pricing"
+            widget: "list"
+            fields:
+              - { label: "Služba", name: "service", widget: "string" }
+              - { label: "Délka", name: "duration", widget: "string" }
+              - { label: "Cena", name: "price", widget: "string" }
+      - name: "masaze-indicka"
+        label: "Indická masáž hlavy"
+        file: "masaze/indicka-masaz.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Popis", name: "body", widget: "markdown" }
+          - label: "Ceník"
+            name: "pricing"
+            widget: "list"
+            fields:
+              - { label: "Služba", name: "service", widget: "string" }
+              - { label: "Délka", name: "duration", widget: "string" }
+              - { label: "Cena", name: "price", widget: "string" }
+      - name: "masaze-cinska"
+        label: "Čínská energetická masáž"
+        file: "masaze/cinska-masaz.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Popis", name: "body", widget: "markdown" }
+          - label: "Ceník"
+            name: "pricing"
+            widget: "list"
+            fields:
+              - { label: "Služba", name: "service", widget: "string" }
+              - { label: "Délka", name: "duration", widget: "string" }
+              - { label: "Cena", name: "price", widget: "string" }
+      - name: "masaze-kineziotaping"
+        label: "Kineziotaping"
+        file: "masaze/kineziotaping.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Popis", name: "body", widget: "markdown" }
+          - label: "Ceník"
+            name: "pricing"
+            widget: "list"
+            fields:
+              - { label: "Služba", name: "service", widget: "string" }
+              - { label: "Délka", name: "duration", widget: "string" }
+              - { label: "Cena", name: "price", widget: "string" }
+      - name: "masaze-bankovani"
+        label: "Baňkování"
+        file: "masaze/bankovani.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Popis", name: "body", widget: "markdown" }
+          - label: "Ceník"
+            name: "pricing"
+            widget: "list"
+            fields:
+              - { label: "Služba", name: "service", widget: "string" }
+              - { label: "Délka", name: "duration", widget: "string" }
+              - { label: "Cena", name: "price", widget: "string" }
+      - name: "masaze-pece"
+        label: "Péče o tělo a duši"
+        file: "masaze/pece-o-telo.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "masaze-poukazy"
+        label: "Dárkové poukazy"
+        file: "masaze/darkove-poukazy.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "masaze-kontakt"
+        label: "Kontakt"
+        file: "masaze/kontakt.html"
+        fields:
+          - { label: "Telefon", name: "phone", widget: "string" }
+          - { label: "Adresa", name: "address", widget: "string" }
+          - { label: "IČO", name: "ico", widget: "string" }
+          - { label: "Otevírací doba", name: "hours", widget: "string" }
+
+  # ── Čínská medicína ──
+  - name: "dtcm"
+    label: "Čínská medicína"
+    files:
+      - name: "dtcm-index"
+        label: "Úvodní stránka"
+        file: "dtcm/index.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+      - name: "dtcm-eav"
+        label: "EAV diagnostika"
+        file: "dtcm/eav.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Popis", name: "body", widget: "markdown" }
+          - label: "Časté otázky"
+            name: "faq"
+            widget: "list"
+            fields:
+              - { label: "Otázka", name: "question", widget: "string" }
+              - { label: "Odpověď", name: "answer", widget: "text" }
+      - name: "dtcm-energy"
+        label: "Energy"
+        file: "dtcm/energy.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "dtcm-pece"
+        label: "Péče o tělo"
+        file: "dtcm/pece-o-telo.html"
+        fields:
+          - { label: "Nadpis", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - name: "dtcm-kontakt"
+        label: "Kontakt"
+        file: "dtcm/kontakt.html"
+        fields:
+          - { label: "Telefon", name: "phone", widget: "string" }
+          - { label: "Adresa", name: "address", widget: "string" }
+          - { label: "IČO", name: "ico", widget: "string" }
+          - { label: "Otevírací doba", name: "hours", widget: "string" }

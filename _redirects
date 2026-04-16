@@ -1,0 +1,10 @@
+# Netlify konfigurace
+
+# Přesměrování z root na /manipedi
+/  /manipedi/  301
+
+# Headers pro bezpečnost
+/*
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
