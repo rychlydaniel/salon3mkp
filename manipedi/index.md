@@ -1,8 +1,8 @@
 ---
 layout: base.njk
 section: manipedi
-title: "Vítejte na stránce salonu 3MKP Miluše Šmejkalové"
-navLabel: "Salon 3MKP"
+title: Vítejte na stránce salonu 3MKP Miluše Šmejkalové !!
+navLabel: Salon 3MKP
 navOrder: 1
 pageType: home
 permalink: /manipedi/
