@@ -94,6 +94,9 @@ collections:
           - { label: "PSČ", name: "zip", widget: "string" }
           - { label: "IČO", name: "ico", widget: "string" }
           - { label: "Otevírací doba", name: "hours", widget: "string" }
+          - { label: "Facebook", name: "facebook", widget: "string" }
+          - { label: "Instagram", name: "instagram", widget: "string" }
+          - { label: "URL mapy", name: "mapUrl", widget: "string" }
 
   # ── Solárium ──
   - name: "solarium"
@@ -135,7 +138,11 @@ collections:
           - { label: "Telefon", name: "phone", widget: "string" }
           - { label: "Adresa", name: "address", widget: "string" }
           - { label: "PSČ", name: "zip", widget: "string" }
+          - { label: "IČO", name: "ico", widget: "string" }
           - { label: "Otevírací doba", name: "hours", widget: "string" }
+          - { label: "Facebook", name: "facebook", widget: "string" }
+          - { label: "Instagram", name: "instagram", widget: "string" }
+          - { label: "URL mapy", name: "mapUrl", widget: "string" }
 
   # ── Masáže ──
   - name: "masaze"
@@ -245,6 +252,9 @@ collections:
           - { label: "PSČ", name: "zip", widget: "string" }
           - { label: "IČO", name: "ico", widget: "string" }
           - { label: "Otevírací doba", name: "hours", widget: "string" }
+          - { label: "Facebook", name: "facebook", widget: "string" }
+          - { label: "Instagram", name: "instagram", widget: "string" }
+          - { label: "URL mapy", name: "mapUrl", widget: "string" }
 
   # ── Čínská medicína ──
   - name: "dtcm"
@@ -288,3 +298,6 @@ collections:
           - { label: "PSČ", name: "zip", widget: "string" }
           - { label: "IČO", name: "ico", widget: "string" }
           - { label: "Otevírací doba", name: "hours", widget: "string" }
+          - { label: "Facebook", name: "facebook", widget: "string" }
+          - { label: "Instagram", name: "instagram", widget: "string" }
+          - { label: "URL mapy", name: "mapUrl", widget: "string" }
