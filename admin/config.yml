@@ -7,6 +7,39 @@ media_folder: "assets/images"
 public_folder: "/assets/images"
 
 collections:
+  # ── Barvy sekcí ──
+  - name: "colors"
+    label: "Barvy sekcí"
+    files:
+      - name: "colors"
+        label: "Nastavení barev"
+        file: "_data/colors.json"
+        fields:
+          - label: "Manikúra & Pedikúra"
+            name: "manipedi"
+            widget: "object"
+            fields:
+              - { label: "Hlavní barva", name: "primary", widget: "color", default: "#2c3e50" }
+              - { label: "Doplňková barva", name: "secondary", widget: "color", default: "#e8d5c4" }
+          - label: "Solárium"
+            name: "solarium"
+            widget: "object"
+            fields:
+              - { label: "Hlavní barva", name: "primary", widget: "color", default: "#b8860b" }
+              - { label: "Doplňková barva", name: "secondary", widget: "color", default: "#fff3d6" }
+          - label: "Masáže"
+            name: "masaze"
+            widget: "object"
+            fields:
+              - { label: "Hlavní barva", name: "primary", widget: "color", default: "#4a7c59" }
+              - { label: "Doplňková barva", name: "secondary", widget: "color", default: "#e0f0e3" }
+          - label: "Čínská medicína"
+            name: "dtcm"
+            widget: "object"
+            fields:
+              - { label: "Hlavní barva", name: "primary", widget: "color", default: "#8b4513" }
+              - { label: "Doplňková barva", name: "secondary", widget: "color", default: "#f5e6d3" }
+
   # ── Manikúra & Pedikúra ──
   - name: "manipedi"
     label: "Manikúra & Pedikúra"

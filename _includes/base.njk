@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - Salon 3MKP</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    {% set sectionColors = colors[section] %}
+    {% if sectionColors %}
+    <style>
+        :root {
+            --primary-color: {{ sectionColors.primary }};
+            --secondary-color: {{ sectionColors.secondary }};
+        }
+    </style>
+    {% endif %}
 </head>
 <body>
     <div class="header-bg"></div>
