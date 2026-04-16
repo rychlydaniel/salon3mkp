@@ -12,9 +12,6 @@ module.exports = defineStackbitConfig({
             logPatterns: {
                 up: ["Server at"]
             },
-            directRoutes: {
-                "socket.io": "socket.io"
-            },
             proxyWebsockets: true
         }
     },
@@ -25,35 +22,20 @@ module.exports = defineStackbitConfig({
             contentDirs: ["manipedi", "solarium", "masaze", "dtcm"],
             models: [
                 {
-                    name: "home-page",
+                    name: "page",
                     type: "page",
-                    label: "Úvodní stránka",
-                    urlPath: "/{section}",
-                    filePath: "{section}/index.md",
+                    label: "Stránka",
                     fields: [
                         { name: "title", type: "string", label: "Nadpis", required: true },
-                        { name: "layout", type: "string", const: "base.njk", hidden: true },
+                        { name: "layout", type: "string", hidden: true },
                         { name: "section", type: "string", hidden: true },
-                        { name: "pageType", type: "string", const: "home", hidden: true },
+                        { name: "pageType", type: "string", hidden: true },
                         { name: "navLabel", type: "string", label: "Název v navigaci" },
                         { name: "navOrder", type: "number", hidden: true },
-                        { name: "permalink", type: "string", hidden: true }
-                    ]
-                },
-                {
-                    name: "contact-page",
-                    type: "page",
-                    label: "Kontakt",
-                    urlPath: "/{section}/kontakt.html",
-                    filePath: "{section}/kontakt.md",
-                    fields: [
-                        { name: "title", type: "string", label: "Nadpis", required: true },
-                        { name: "layout", type: "string", const: "base.njk", hidden: true },
-                        { name: "section", type: "string", hidden: true },
-                        { name: "pageType", type: "string", const: "contact", hidden: true },
-                        { name: "navLabel", type: "string", hidden: true },
-                        { name: "navOrder", type: "number", hidden: true },
                         { name: "permalink", type: "string", hidden: true },
+                        { name: "image", type: "image", label: "Obrázek" },
+                        { name: "imageAlt", type: "string", label: "Popis obrázku" },
+                        { name: "imagePosition", type: "string", hidden: true },
                         { name: "phone", type: "string", label: "Telefon" },
                         { name: "address", type: "string", label: "Adresa" },
                         { name: "zip", type: "string", label: "PSČ" },
@@ -61,28 +43,7 @@ module.exports = defineStackbitConfig({
                         { name: "hours", type: "string", label: "Otevírací doba" },
                         { name: "facebook", type: "string", label: "Facebook" },
                         { name: "instagram", type: "string", label: "Instagram" },
-                        { name: "mapUrl", type: "url", label: "URL mapy" }
-                    ]
-                },
-                {
-                    name: "content-page",
-                    type: "page",
-                    label: "Stránka",
-                    urlPath: "/{section}/{slug}.html",
-                    filePath: "{section}/{slug}.md",
-                    fields: [
-                        { name: "title", type: "string", label: "Nadpis", required: true },
-                        { name: "layout", type: "string", const: "base.njk", hidden: true },
-                        { name: "section", type: "string", hidden: true },
-                        { name: "navLabel", type: "string", label: "Název v navigaci" },
-                        { name: "navOrder", type: "number", hidden: true },
-                        { name: "permalink", type: "string", hidden: true },
-                        { name: "image", type: "image", label: "Obrázek" },
-                        { name: "imageAlt", type: "string", label: "Popis obrázku" },
-                        { name: "imagePosition", type: "enum", label: "Pozice obrázku", options: [
-                            { label: "Vedle textu", value: "side" },
-                            { label: "Nahoře", value: "top" }
-                        ]},
+                        { name: "mapUrl", type: "string", label: "URL mapy" },
                         {
                             name: "pricing",
                             type: "list",
@@ -104,7 +65,7 @@ module.exports = defineStackbitConfig({
                                 type: "object",
                                 fields: [
                                     { name: "question", type: "string", label: "Otázka" },
-                                    { name: "answer", type: "text", label: "Odpověď" }
+                                    { name: "answer", type: "string", label: "Odpověď" }
                                 ]
                             }
                         }
