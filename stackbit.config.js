@@ -1,10 +1,11 @@
-import { defineStackbitConfig } from "@stackbit/types";
-import { GitContentSource } from "@stackbit/cms-git";
+const { defineStackbitConfig } = require("@stackbit/types");
+const { GitContentSource } = require("@stackbit/cms-git");
 
-export default defineStackbitConfig({
+module.exports = defineStackbitConfig({
     stackbitVersion: "~0.6.0",
     ssgName: "eleventy",
     nodeVersion: "18",
+    devCommand: "npx eleventy --serve --port {PORT}",
     contentSources: [
         new GitContentSource({
             rootPath: __dirname,
@@ -104,24 +105,5 @@ export default defineStackbitConfig({
                 publicPath: "/assets"
             }
         })
-    ],
-    siteMap: ({ documents }) => {
-        return documents
-            .filter((doc) => doc.modelName === "home-page" || doc.modelName === "content-page" || doc.modelName === "contact-page")
-            .map((doc) => {
-                const section = doc.fields?.section;
-                const slug = doc.id?.split("/").pop()?.replace(".md", "");
-                let urlPath;
-                if (slug === "index") {
-                    urlPath = `/${section}/`;
-                } else {
-                    urlPath = `/${section}/${slug}.html`;
-                }
-                return {
-                    urlPath,
-                    document: doc,
-                    label: doc.fields?.navLabel || doc.fields?.title
-                };
-            });
-    }
+    ]
 });
