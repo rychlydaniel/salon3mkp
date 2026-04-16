@@ -19,6 +19,14 @@
 </head>
 <body>
     <div id="loading">Načítám administraci...</div>
+    <script>
+        // Skryj loading jakmile se CMS načte
+        var obs = new MutationObserver(function() {
+            var el = document.getElementById('loading');
+            if (el && document.getElementById('nc-root')) { el.remove(); obs.disconnect(); }
+        });
+        obs.observe(document.body, { childList: true, subtree: true });
+    </script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
         // Zachytí invite/recovery token PŘED načtením CMS
