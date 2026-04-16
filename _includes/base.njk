@@ -35,7 +35,7 @@
         </ul>
     </nav>
 
-    <main class="container" data-sb-object-id="{{ page.inputPath }}">
+    <main class="container" data-sb-object-id="{{ page.inputPath | replace('./','') }}">
         {% if pageType == "home" %}
             <h1 data-sb-field-path="title">{{ title }}</h1>
             {{ content | safe }}
