@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Salon 3MKP</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="header-bg"></div>
+
+    {% set sec = sections[section] %}
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div>
+                    <a href="/{{ section }}/" class="brand-name">3MKP</a>
+                    <div class="brand-subtitle">{{ sec.subtitle }}</div>
+                </div>
+            </div>
+            <ul class="main-menu">
+                {% for link in sec.topNav %}
+                <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="secondary-nav">
+        <ul class="secondary-menu">
+            {% set sectionPages = collections[section] %}
+            {% for item in sectionPages %}
+            <li><a href="{{ item.url }}"{% if item.url == page.url %} class="active"{% endif %}>{{ item.data.navLabel }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <main class="container" data-sb-object-id="{{ page.inputPath }}">
+        {% if pageType == "home" %}
+            <h1 data-sb-field-path="title">{{ title }}</h1>
+            {{ content | safe }}
+
+        {% elif pageType == "contact" %}
+            <h2 data-sb-field-path="title">{{ title }}</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin: 40px 0;">
+                <div class="contact-info">
+                    <h3>Navštivte nás</h3>
+                    <p data-sb-field-path="address">{{ address }}<br>{{ zip }}</p>
+                    {% if ico %}<p>IČO: <span data-sb-field-path="ico">{{ ico }}</span></p>{% endif %}
+                    <p>Tel: <span data-sb-field-path="phone">{{ phone }}</span></p>
+                </div>
+                <div class="contact-info">
+                    <h3>Otevírací doba</h3>
+                    <p data-sb-field-path="hours">{{ hours | safe }}</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Webové stránky</h3>
+                    {% if facebook %}<p>Facebook: <span data-sb-field-path="facebook">{{ facebook }}</span></p>{% endif %}
+                    {% if instagram %}<p>Instagram: <span data-sb-field-path="instagram">{{ instagram }}</span></p>{% endif %}
+                </div>
+            </div>
+            {% if mapUrl %}
+            <div class="map-container">
+                <iframe style="border:none" src="{{ mapUrl }}" width="100%" height="400" frameborder="0"></iframe>
+            </div>
+            {% endif %}
+
+        {% else %}
+            <h2 data-sb-field-path="title">{{ title }}</h2>
+
+            {% if image and imagePosition == "top" %}
+                <div class="text-center">
+                    <img src="{{ image }}" alt="{{ imageAlt }}" style="max-width: 900px; width: 100%; height: auto; border-radius: 8px;">
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    {{ content | safe }}
+                </div>
+            {% elif image %}
+                <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 300px;">
+                        {{ content | safe }}
+                    </div>
+                    <div style="flex: 0 0 auto;">
+                        <img src="{{ image }}" alt="{{ imageAlt }}" class="content-image">
+                    </div>
+                </div>
+            {% else %}
+                {{ content | safe }}
+            {% endif %}
+
+            {% if pricing and pricing.length %}
+            <table class="pricing-table" data-sb-field-path="pricing">
+                <thead><tr><th>Služba</th><th>Délka</th><th>Cena</th></tr></thead>
+                <tbody>
+                    {% for item in pricing %}
+                    <tr data-sb-field-path=".{{ loop.index0 }}">
+                        <td data-sb-field-path=".service">{{ item.service }}</td>
+                        <td data-sb-field-path=".duration">{{ item.duration }}</td>
+                        <td data-sb-field-path=".price">{{ item.price }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+
+            {% if faq and faq.length %}
+            <h3 class="mt-40">Časté otázky</h3>
+            {% for item in faq %}
+            <div class="faq-item" data-sb-field-path="faq.{{ loop.index0 }}">
+                <h3 data-sb-field-path=".question">{{ item.question }}</h3>
+                <p data-sb-field-path=".answer">{{ item.answer }}</p>
+            </div>
+            {% endfor %}
+            {% endif %}
+        {% endif %}
+    </main>
+
+    <footer>
+        <p>&copy; 2035 by Soft Aesthetics</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+            <a href="https://twitter.com/" target="_blank">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>

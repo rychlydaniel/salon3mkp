@@ -1,0 +1,34 @@
+{
+  "manipedi": {
+    "subtitle": "Manikúra & Pedikúra",
+    "topNav": [
+      { "label": "Solárium", "url": "/solarium/" },
+      { "label": "Masáže", "url": "/masaze/" },
+      { "label": "Čínská medicína", "url": "/dtcm/" }
+    ]
+  },
+  "solarium": {
+    "subtitle": "Solárium",
+    "topNav": [
+      { "label": "Mani/Pedi", "url": "/manipedi/" },
+      { "label": "Masáže", "url": "/masaze/" },
+      { "label": "Čínská medicína", "url": "/dtcm/" }
+    ]
+  },
+  "masaze": {
+    "subtitle": "Masážní, rekondiční a regenerační služby",
+    "topNav": [
+      { "label": "Mani/Pedi", "url": "/manipedi/" },
+      { "label": "Solárium", "url": "/solarium/" },
+      { "label": "Čínská medicína", "url": "/dtcm/" }
+    ]
+  },
+  "dtcm": {
+    "subtitle": "Diagnostika tradiční čínské medicíny",
+    "topNav": [
+      { "label": "Mani/Pedi", "url": "/manipedi/" },
+      { "label": "Solárium", "url": "/solarium/" },
+      { "label": "Masáže", "url": "/masaze/" }
+    ]
+  }
+}

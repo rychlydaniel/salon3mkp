@@ -13,51 +13,52 @@ collections:
     files:
       - name: "manipedi-index"
         label: "Úvodní stránka"
-        file: "manipedi/index.html"
+        file: "manipedi/index.md"
         fields:
-          - { label: "Nadpis", name: "title", widget: "string", default: "Vítejte na stránce salonu 3MKP Miluše Šmejkalová" }
+          - { label: "Nadpis", name: "title", widget: "string" }
       - name: "manipedi-pedikura"
         label: "Pedikúra"
-        file: "manipedi/pedikura.html"
+        file: "manipedi/pedikura.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "manipedi-manikura"
         label: "Manikúra"
-        file: "manipedi/manikura.html"
+        file: "manipedi/manikura.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "manipedi-parafin"
         label: "Parafínové zábaly"
-        file: "manipedi/parafinove-zabaly.html"
+        file: "manipedi/parafinove-zabaly.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "manipedi-epilace"
         label: "Epilace"
-        file: "manipedi/epilace.html"
+        file: "manipedi/epilace.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "manipedi-pojistovna"
         label: "Příspěvek pojišťovny"
-        file: "manipedi/prispevek-pojistovny.html"
+        file: "manipedi/prispevek-pojistovny.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "manipedi-poukazy"
         label: "Dárkové poukazy"
-        file: "manipedi/darkove-poukazy.html"
+        file: "manipedi/darkove-poukazy.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "manipedi-kontakt"
         label: "Kontakt"
-        file: "manipedi/kontakt.html"
+        file: "manipedi/kontakt.md"
         fields:
           - { label: "Telefon", name: "phone", widget: "string" }
           - { label: "Adresa", name: "address", widget: "string" }
+          - { label: "PSČ", name: "zip", widget: "string" }
           - { label: "IČO", name: "ico", widget: "string" }
           - { label: "Otevírací doba", name: "hours", widget: "string" }
 
@@ -67,39 +68,40 @@ collections:
     files:
       - name: "solarium-index"
         label: "Úvodní stránka"
-        file: "solarium/index.html"
+        file: "solarium/index.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
       - name: "solarium-info"
         label: "Solárium"
-        file: "solarium/solarium.html"
+        file: "solarium/solarium.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "solarium-kremy"
         label: "Krémy"
-        file: "solarium/kremy.html"
+        file: "solarium/kremy.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "solarium-doporuceni"
         label: "Doporučení"
-        file: "solarium/doporuceni.html"
+        file: "solarium/doporuceni.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "solarium-poukazy"
         label: "Dárkové poukazy"
-        file: "solarium/darkove-poukazy.html"
+        file: "solarium/darkove-poukazy.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "solarium-kontakt"
         label: "Kontakt"
-        file: "solarium/kontakt.html"
+        file: "solarium/kontakt.md"
         fields:
           - { label: "Telefon", name: "phone", widget: "string" }
           - { label: "Adresa", name: "address", widget: "string" }
+          - { label: "PSČ", name: "zip", widget: "string" }
           - { label: "Otevírací doba", name: "hours", widget: "string" }
 
   # ── Masáže ──
@@ -108,12 +110,12 @@ collections:
     files:
       - name: "masaze-index"
         label: "Úvodní stránka"
-        file: "masaze/index.html"
+        file: "masaze/index.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
       - name: "masaze-sportovni"
         label: "Masáže (ceník)"
-        file: "masaze/sportovni-masaz.html"
+        file: "masaze/sportovni-masaz.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Popis", name: "body", widget: "markdown" }
@@ -126,7 +128,7 @@ collections:
               - { label: "Cena", name: "price", widget: "string" }
       - name: "masaze-balneo"
         label: "Balneo zábaly"
-        file: "masaze/balneo-zabaly.html"
+        file: "masaze/balneo-zabaly.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Popis", name: "body", widget: "markdown" }
@@ -139,7 +141,7 @@ collections:
               - { label: "Cena", name: "price", widget: "string" }
       - name: "masaze-indicka"
         label: "Indická masáž hlavy"
-        file: "masaze/indicka-masaz.html"
+        file: "masaze/indicka-masaz.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Popis", name: "body", widget: "markdown" }
@@ -152,7 +154,7 @@ collections:
               - { label: "Cena", name: "price", widget: "string" }
       - name: "masaze-cinska"
         label: "Čínská energetická masáž"
-        file: "masaze/cinska-masaz.html"
+        file: "masaze/cinska-masaz.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Popis", name: "body", widget: "markdown" }
@@ -165,7 +167,7 @@ collections:
               - { label: "Cena", name: "price", widget: "string" }
       - name: "masaze-kineziotaping"
         label: "Kineziotaping"
-        file: "masaze/kineziotaping.html"
+        file: "masaze/kineziotaping.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Popis", name: "body", widget: "markdown" }
@@ -178,7 +180,7 @@ collections:
               - { label: "Cena", name: "price", widget: "string" }
       - name: "masaze-bankovani"
         label: "Baňkování"
-        file: "masaze/bankovani.html"
+        file: "masaze/bankovani.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Popis", name: "body", widget: "markdown" }
@@ -191,22 +193,23 @@ collections:
               - { label: "Cena", name: "price", widget: "string" }
       - name: "masaze-pece"
         label: "Péče o tělo a duši"
-        file: "masaze/pece-o-telo.html"
+        file: "masaze/pece-o-telo.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "masaze-poukazy"
         label: "Dárkové poukazy"
-        file: "masaze/darkove-poukazy.html"
+        file: "masaze/darkove-poukazy.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "masaze-kontakt"
         label: "Kontakt"
-        file: "masaze/kontakt.html"
+        file: "masaze/kontakt.md"
         fields:
           - { label: "Telefon", name: "phone", widget: "string" }
           - { label: "Adresa", name: "address", widget: "string" }
+          - { label: "PSČ", name: "zip", widget: "string" }
           - { label: "IČO", name: "ico", widget: "string" }
           - { label: "Otevírací doba", name: "hours", widget: "string" }
 
@@ -216,12 +219,12 @@ collections:
     files:
       - name: "dtcm-index"
         label: "Úvodní stránka"
-        file: "dtcm/index.html"
+        file: "dtcm/index.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
       - name: "dtcm-eav"
         label: "EAV diagnostika"
-        file: "dtcm/eav.html"
+        file: "dtcm/eav.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Popis", name: "body", widget: "markdown" }
@@ -233,21 +236,22 @@ collections:
               - { label: "Odpověď", name: "answer", widget: "text" }
       - name: "dtcm-energy"
         label: "Energy"
-        file: "dtcm/energy.html"
+        file: "dtcm/energy.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "dtcm-pece"
         label: "Péče o tělo"
-        file: "dtcm/pece-o-telo.html"
+        file: "dtcm/pece-o-telo.md"
         fields:
           - { label: "Nadpis", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
       - name: "dtcm-kontakt"
         label: "Kontakt"
-        file: "dtcm/kontakt.html"
+        file: "dtcm/kontakt.md"
         fields:
           - { label: "Telefon", name: "phone", widget: "string" }
           - { label: "Adresa", name: "address", widget: "string" }
+          - { label: "PSČ", name: "zip", widget: "string" }
           - { label: "IČO", name: "ico", widget: "string" }
           - { label: "Otevírací doba", name: "hours", widget: "string" }
