@@ -105,9 +105,9 @@ body {
 
 /* Sekundární navigace - služby */
 .secondary-nav {
-    background: var(--light-bg);
+    background: var(--secondary-color);
     padding: 15px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .secondary-menu {
