@@ -70,7 +70,7 @@
             </div>
             {% if mapUrl %}
             <div class="map-container">
-                <iframe style="border:none" src="{{ mapUrl }}" width="100%" height="400" frameborder="0"></iframe>
+                <iframe style="border:none" src="{{ mapUrl }}" width="100%" height="400" frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allow="geolocation"></iframe>
             </div>
             {% endif %}
 
