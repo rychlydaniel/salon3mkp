@@ -52,28 +52,28 @@
         </ul>
     </nav>
 
-    <main class="container" data-sb-object-id="{{ page.inputPath | replace('./','') }}">
+    <main class="container">
         {% if pageType == "home" %}
-            <h1 data-sb-field-path="title">{{ title }}</h1>
+            <h1>{{ title }}</h1>
             {{ content | safe }}
 
         {% elif pageType == "contact" %}
-            <h2 data-sb-field-path="title">{{ title }}</h2>
+            <h2>{{ title }}</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin: 40px 0;">
                 <div class="contact-info">
                     <h3>Navštivte nás</h3>
-                    <p data-sb-field-path="address">{{ address }}<br>{{ zip }}</p>
-                    {% if ico %}<p>IČO: <span data-sb-field-path="ico">{{ ico }}</span></p>{% endif %}
-                    <p>Tel: <span data-sb-field-path="phone">{{ phone }}</span></p>
+                    <p>{{ address }}<br>{{ zip }}</p>
+                    {% if ico %}<p>IČO: {{ ico }}</p>{% endif %}
+                    <p>Tel: {{ phone }}</p>
                 </div>
                 <div class="contact-info">
                     <h3>Otevírací doba</h3>
-                    <p data-sb-field-path="hours">{{ hours | safe }}</p>
+                    <p>{{ hours | safe }}</p>
                 </div>
                 <div class="contact-info">
                     <h3>Webové stránky</h3>
-                    {% if facebook %}<p>Facebook: <span data-sb-field-path="facebook">{{ facebook }}</span></p>{% endif %}
-                    {% if instagram %}<p>Instagram: <span data-sb-field-path="instagram">{{ instagram }}</span></p>{% endif %}
+                    {% if facebook %}<p>Facebook: {{ facebook }}</p>{% endif %}
+                    {% if instagram %}<p>Instagram: {{ instagram }}</p>{% endif %}
                 </div>
             </div>
             {% if mapUrl %}
@@ -83,7 +83,7 @@
             {% endif %}
 
         {% else %}
-            <h2 data-sb-field-path="title">{{ title }}</h2>
+            <h2>{{ title }}</h2>
 
             {% if image and imagePosition == "top" %}
                 <div class="text-center">
@@ -106,14 +106,14 @@
             {% endif %}
 
             {% if pricing and pricing.length %}
-            <table class="pricing-table" data-sb-field-path="pricing">
+            <table class="pricing-table">
                 <thead><tr><th>Služba</th><th>Délka</th><th>Cena</th></tr></thead>
                 <tbody>
                     {% for item in pricing %}
-                    <tr data-sb-field-path=".{{ loop.index0 }}">
-                        <td data-sb-field-path=".service">{{ item.service }}</td>
-                        <td data-sb-field-path=".duration">{{ item.duration }}</td>
-                        <td data-sb-field-path=".price">{{ item.price }}</td>
+                    <tr>
+                        <td>{{ item.service }}</td>
+                        <td>{{ item.duration }}</td>
+                        <td>{{ item.price }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -123,9 +123,9 @@
             {% if faq and faq.length %}
             <h3 class="mt-40">Časté otázky</h3>
             {% for item in faq %}
-            <div class="faq-item" data-sb-field-path="faq.{{ loop.index0 }}">
-                <h3 data-sb-field-path=".question">{{ item.question }}</h3>
-                <p data-sb-field-path=".answer">{{ item.answer }}</p>
+            <div class="faq-item">
+                <h3>{{ item.question }}</h3>
+                <p>{{ item.answer }}</p>
             </div>
             {% endfor %}
             {% endif %}
